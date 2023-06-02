@@ -30,6 +30,6 @@ app.use('/', indexRouter)
 app.use('/authors', authorRouter)
 
 const port = process.env.PORT || 3000; 
-app.listen(port, '0.0.0.0')
+app.listen(port)
 
   
