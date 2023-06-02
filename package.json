@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mui/utils": "^5.13.1",
     "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "ejs": "^3.1.9",

@@ -1,4 +1,4 @@
-const { formatMuiErrorMessage } = require('@mui/utils')
+const {formatMuiErrorMessage } = require('@mui/utils')
 const express = require('express')
 const router = express.Router()
 const Author = require('../ models/author')
