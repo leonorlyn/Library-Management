@@ -46,7 +46,8 @@ router.post('/', async (req, res) => {
   try {
     const newBook = await book.save()
     res.redirect(`books/${newBook.id}`)
-  } catch {
+  } catch(err) {
+    console.log(err)
     renderNewPage(res, book, true)
   }
 })
@@ -102,7 +103,8 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   let book
   try {
-    book = await Book.findByIdAndDelete(req.params.id)
+    book = await Book.findById(req.params.id)
+    await book.deleteOne()
     res.redirect('/books')
   } catch {
     if (book != null) {

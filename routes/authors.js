@@ -41,7 +41,6 @@ router.post('/', async (req, res) => {
   }
 })
 
-// Show the books for selected author
 router.get('/:id', async (req, res) => {
   try {
     const author = await Author.findById(req.params.id)
@@ -55,7 +54,6 @@ router.get('/:id', async (req, res) => {
   }
 })
 
-// Edit author
 router.get('/:id/edit', async (req, res) => {
   try {
     const author = await Author.findById(req.params.id)
@@ -65,8 +63,6 @@ router.get('/:id/edit', async (req, res) => {
   }
 })
 
-
-// Show one author page
 router.put('/:id', async (req, res) => {
   let author
   try {
@@ -86,18 +82,14 @@ router.put('/:id', async (req, res) => {
   }
 })
 
-// Delete the author
 router.delete('/:id', async (req, res) => {
   let author
+  author = await Author.findById(req.params.id);
   try {
-    const author = await Author.findByIdAndDelete(req.params.id);
+    await Author.deleteOne({_id: req.params.id})
     res.redirect('/authors')
-  } catch(err) {
-    if (author == null) {
-    res.redirect('/')
-    } else {
-    res.redirect(`/authors/${author.id}`)
-    }
+  } catch (err){
+      res.redirect(`/authors/${author.id}`)
   }
 })
 
