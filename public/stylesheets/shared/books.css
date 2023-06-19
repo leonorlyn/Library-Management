@@ -1,7 +1,7 @@
 :root {
     --book-cover-width: 200px;
     --book-cover-width-large: 325px;
-    --book-cover-aspect-ratio: 0.75;
+    --book-cover-aspect-ratio: 0.80;
   }
   
 .book-cover {
@@ -13,16 +13,17 @@
     --book-cover-width: var(--book-cover-width-large);
   }
   
-.book-grid {
+  .book-grid {
     display: grid;
     justify-content: center;
     grid-gap: 2rem;
-    grid-template-columns: repeat(auto-fill, 200px);
+    grid-template-columns: repeat(3, 1fr); /* Display three books per row */
   }
   
   .book-grid-large {
-    grid-template-columns: repeat(auto-fill, var(--book-cover-width-large));
+    grid-template-columns: repeat(3, 1fr); /* Adjust for large layout */
   }
+  
   
   .book-details {
     display: flex;

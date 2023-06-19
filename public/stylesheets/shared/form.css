@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,400&display=swap');
 :root {
     --form-label-font-size: 1.2rem;
     --form-input-background-color: hsl(var(--color-base-hue), 100%, 31%);
@@ -42,10 +43,10 @@
     border-radius: .25rem;
     border: 1px solid var(--form-input-border-color);
     background-color: var(--form-input-background-color);
-    color: var(--color-text-light);
+    color: whitesmoke;
     font-size: 1rem;
     font-weight: normal;
-    font-family: 'Gotham Rounded';
+    font-family: 'Kanit';
     outline: none;
   }
   
@@ -63,7 +64,7 @@
   }
   
   .filepond--root {
-    font-family: 'Gotham Rounded';
+    font-family: 'Kanit';
     margin-bottom: 0;
   }
   

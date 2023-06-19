@@ -5,7 +5,7 @@
 }
 
 .header-title {
-  color: var(--color-text-light);
+  color: white;
   text-decoration: none;
   font-size: var(--nav-title-font-size);
   font-weight: var(--nav-title-font-weight);
@@ -31,11 +31,15 @@
 
 .header-nav li a {
   text-decoration: none;
-  color: var(--color-text-light);
+  color: whitesmoke;
   font-weight: var(--nav-link-font-weight);
   padding: 1rem;
 }
 
-.header-nav li a:hover, .header-title:hover {
-  color: white;
+.header-nav li a:hover {
+  color: #86A8E7;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  text-decoration-color: #86A8E7;
+  transition: text-decoration 0.3s ease-in-out;
 }

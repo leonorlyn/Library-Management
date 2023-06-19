@@ -1,2 +1,12 @@
-<h2 class="page-header">Recently Added</h2>
-<%- include('partials/bookGrid', { books: books, large: true }) %>
+<div class="floating-section">
+  <div class="floating-image">
+    <a href="/books/new">
+      <img src="../image/book.png" >
+    </a>
+    <h1>Start to Manage your Library!</h1>
+  </div> 
+</div>
+<div class = "content">
+  <h2 class="page-header">Recently Added</h2>
+  <%- include('partials/bookGrid', { books: books, large: true }) %>
+</div>

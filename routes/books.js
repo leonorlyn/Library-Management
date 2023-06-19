@@ -141,18 +141,26 @@ async function renderFormPage(res, book, form, hasError = false) {
       }
     }
     res.render(`books/${form}`, params)
-  } catch {
+  } catch(err) {
+    console.error(err)
     res.redirect('/books')
   }
 }
 
 function saveCover(book, coverEncoded) {
-  if (coverEncoded == null) return
-  const cover = JSON.parse(coverEncoded)
-  if (cover != null && imageMimeTypes.includes(cover.type)) {
-    book.coverImage = new Buffer.from(cover.data, 'base64')
-    book.coverImageType = cover.type
+  if (coverEncoded == null) return;
+
+  try {
+    const cover = JSON.parse(coverEncoded);
+
+    if (cover != null && imageMimeTypes.includes(cover.type)) {
+      book.coverImage = Buffer.from(cover.data, 'base64');
+      book.coverImageType = cover.type;
+    }
+  } catch (error) {
+    console.error('Error parsing cover image:', error);
   }
 }
+
 
 module.exports = router
