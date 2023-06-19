@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,500;1,400&display=swap');
 :root {
-    --form-label-font-size: 1.2rem;
+    --form-label-font-size: 1.5rem;
     --form-input-background-color: hsl(var(--color-base-hue), 100%, 31%);
     --form-input-border-color: hsl(var(--color-base-hue), 100%, 50%);
     --form-input-border-color-light: hsl(var(--color-base-hue), 100%, 80%);

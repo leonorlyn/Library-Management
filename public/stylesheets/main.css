@@ -39,7 +39,8 @@ body {
 }
 
 .error-message {
-  color: hsl(var(--color-danger-hue), 100%, 50%);
+  color: hsl(var(--color-danger-hue), 80%, 70%);
+  font-size: 1.5rem;;
 }
 
 .floating-section {
